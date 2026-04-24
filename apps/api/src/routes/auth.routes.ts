@@ -1,13 +1,16 @@
 import { Router } from "express";
-import { auth } from "../auth.js";
-import { toNodeHandler } from "better-auth/node";
+import { getAuthHandler } from "../auth.js";
 
 const router = Router();
-const authHandler = toNodeHandler(auth);
 
-// Correct implementation for Express with Better Auth
-router.all("/api/auth/*", (req, res) => {
-    return authHandler(req, res);
+// Correct implementation for Express with Better Auth (lazy init)
+router.all("/api/auth/*", async (req, res, next) => {
+    try {
+        const authHandler = await getAuthHandler();
+        return authHandler(req, res);
+    } catch (err) {
+        next(err);
+    }
 });
 
 export const authRoutes = router;
