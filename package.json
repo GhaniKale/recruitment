@@ -1,0 +1,13 @@
+{
+  "name": "recruitment-mardel-monorepo",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "npm run dev --workspace=web-next",
+    "build": "npm run build --workspace=web-next",
+    "preview": "npm run preview --workspace=web-next"
+  },
+  "workspaces": [
+    "apps/*"
+  ]
+}

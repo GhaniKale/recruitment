@@ -1,0 +1,129 @@
+﻿
+> web-next@0.1.0 lint
+> eslint
+
+
+C:\laragon\www\recruitment-mardel\apps\web-next\src\app\admin\candidates\page.tsx
+  57:31  warning  'count' is assigned a value but never used          @typescript-eslint/no-unused-vars
+  74:11  warning  'getBadgeColor' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+C:\laragon\www\recruitment-mardel\apps\web-next\src\app\admin\dashboard\page.tsx
+  2:8  warning  'AdminLayout' is defined but never used  @typescript-eslint/no-unused-vars
+
+C:\laragon\www\recruitment-mardel\apps\web-next\src\app\admin\jobs\actions.ts
+   8:44  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+  74:56  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\laragon\www\recruitment-mardel\apps\web-next\src\app\admin\jobs\page.tsx
+  33:25  warning  'count' is assigned a value but never used  @typescript-eslint/no-unused-vars
+  33:32  warning  'error' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+C:\laragon\www\recruitment-mardel\apps\web-next\src\app\api\admin\applications\[id]\route.ts
+   1:10  warning  'createClient' is defined but never used  @typescript-eslint/no-unused-vars
+  75:19  error    Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\laragon\www\recruitment-mardel\apps\web-next\src\app\api\admin\applications\route.ts
+  6:27  warning  'request' is defined but never used  @typescript-eslint/no-unused-vars
+
+C:\laragon\www\recruitment-mardel\apps\web-next\src\app\jobs\[id]\apply\actions.ts
+  5:10  warning  'redirect' is defined but never used      @typescript-eslint/no-unused-vars
+  7:52  error    Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\laragon\www\recruitment-mardel\apps\web-next\src\app\jobs\page.tsx
+  13:25  warning  'error' is assigned a value but never used  @typescript-eslint/no-unused-vars
+  43:54  error    Unexpected any. Specify a different type    @typescript-eslint/no-explicit-any
+
+C:\laragon\www\recruitment-mardel\apps\web-next\src\app\layout.tsx
+  21:9  warning  A font-display parameter is missing (adding `&display=optional` is recommended). See: https://nextjs.org/docs/messages/google-font-display                       @next/next/google-font-display
+  21:9  warning  Custom fonts not added in `pages/_document.js` will only load for a single page. This is discouraged. See: https://nextjs.org/docs/messages/no-page-custom-font  @next/next/no-page-custom-font
+
+C:\laragon\www\recruitment-mardel\apps\web-next\src\components\About.jsx
+  70:29  warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+  75:29  warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+C:\laragon\www\recruitment-mardel\apps\web-next\src\components\AdminSidebar.jsx
+  27:8  warning  React Hook useEffect has missing dependencies: 'setSidebarOpen' and 'sidebarOpen'. Either include them or remove the dependency array. If 'setSidebarOpen' changes too often, find the parent component that defines it and wrap that definition in useCallback  react-hooks/exhaustive-deps
+
+C:\laragon\www\recruitment-mardel\apps\web-next\src\components\AnalyticsMap.jsx
+  12:21  warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+C:\laragon\www\recruitment-mardel\apps\web-next\src\components\ApplicantsTable.jsx
+  22:11  warning  'displayApplicants' is assigned a value but never used  @typescript-eslint/no-unused-vars
+
+C:\laragon\www\recruitment-mardel\apps\web-next\src\components\Footer.jsx
+   1:8   warning  'clsx' is defined but never used                                                                                                                                                                                                                                                         @typescript-eslint/no-unused-vars
+  38:33  error    Do not use an `<a>` element to navigate to `/jobs/`. Use `<Link />` from `next/link` instead. See: https://nextjs.org/docs/messages/no-html-link-for-pages                                                                                                                               @next/next/no-html-link-for-pages
+  66:29  warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+C:\laragon\www\recruitment-mardel\apps\web-next\src\components\HomeCTA.jsx
+  14:21  error  Do not use an `<a>` element to navigate to `/jobs/`. Use `<Link />` from `next/link` instead. See: https://nextjs.org/docs/messages/no-html-link-for-pages  @next/next/no-html-link-for-pages
+
+C:\laragon\www\recruitment-mardel\apps\web-next\src\components\HomeHero.jsx
+  25:29  error    Do not use an `<a>` element to navigate to `/jobs/`. Use `<Link />` from `next/link` instead. See: https://nextjs.org/docs/messages/no-html-link-for-pages                                                                                                                               @next/next/no-html-link-for-pages
+  42:29  warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+C:\laragon\www\recruitment-mardel\apps\web-next\src\components\MapPreview.jsx
+  6:17  warning  Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` or a custom image loader to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+C:\laragon\www\recruitment-mardel\apps\web-next\src\components\SuccessCard.jsx
+  32:124  error  Error: Cannot call impure function during render
+
+`Math.random` is an impure function. Calling an impure function can produce unstable results that update unpredictably when the component happens to re-render. (https://react.dev/reference/rules/components-and-hooks-must-be-pure#components-and-hooks-must-be-idempotent).
+
+  30 |             <div className="mt-8 pt-6 border-t border-slate-100 dark:border-slate-800">
+  31 |                 <p className="text-xs text-slate-400">
+> 32 |                     ID Referensi: <span className="font-mono text-slate-500 dark:text-slate-300">#APP-{Math.floor(100000 + Math.random() * 900000)}</span>
+     |                                                                                                                            ^^^^^^^^^^^^^ Cannot call impure function
+  33 |                 </p>
+  34 |             </div>
+  35 |         </div>  react-hooks/purity
+
+C:\laragon\www\recruitment-mardel\apps\web-next\src\components\admin\DeleteCandidateButton.tsx
+  44:25  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+C:\laragon\www\recruitment-mardel\apps\web-next\src\components\admin\DownloadCvButton.tsx
+  10:50  warning  'filename' is defined but never used  @typescript-eslint/no-unused-vars
+
+C:\laragon\www\recruitment-mardel\apps\web-next\src\components\admin\JobForm.tsx
+   8:50  error    Unexpected any. Specify a different type     @typescript-eslint/no-explicit-any
+  10:11  warning  'router' is assigned a value but never used  @typescript-eslint/no-unused-vars
+  33:68  error    Unexpected any. Specify a different type     @typescript-eslint/no-explicit-any
+  35:30  error    Unexpected any. Specify a different type     @typescript-eslint/no-explicit-any
+
+C:\laragon\www\recruitment-mardel\apps\web-next\src\utils\supabase\admin.ts
+  12:56  error  Unexpected any. Specify a different type  @typescript-eslint/no-explicit-any
+
+Γ£û 36 problems (14 errors, 22 warnings)
+
+node.exe : npm error 
+Lifecycle script `lint` 
+failed with error:
+At line:1 char:1
++ & "C:\Program 
+Files\nodejs/node.exe" 
+"C:\Program 
+Files\nodejs/node_mo ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~
+    + CategoryInfo         
+     : NotSpecified: (npm  
+   error Lifec...led wit   
+ h error::String) [], R    
+emoteException
+    + FullyQualifiedErrorI 
+   d : NativeCommandError
+ 
+npm error code 1
+npm error path C:\laragon\w
+ww\recruitment-mardel\apps\
+web-next
+npm error workspace 
+web-next@0.1.0
+npm error location C:\larag
+on\www\recruitment-mardel\a
+pps\web-next
+npm error command failed
+npm error command C:\WINDOW
+S\system32\cmd.exe /d /s 
+/c eslint
