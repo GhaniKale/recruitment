@@ -1,5 +1,5 @@
-import { db } from "../db";
-import { jobs } from "../db/schema";
+import { db } from "../db/index.js";
+import { jobs } from "../db/schema.js";
 import { eq, desc } from "drizzle-orm";
 
 export const JobService = {

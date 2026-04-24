@@ -2,6 +2,7 @@
     "name": "recruitment-mardel-api",
     "version": "1.0.0",
     "description": "Backend API for Recruitment App",
+    "type": "module",
     "main": "dist/index.js",
     "scripts": {
         "dev": "tsx watch src/index.ts",

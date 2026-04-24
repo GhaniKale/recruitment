@@ -16,9 +16,9 @@ app.get("/", (req, res) => {
     res.send("Recruitment App API");
 });
 
-import { jobRoutes } from "./routes/job.routes";
-import { candidateRoutes } from "./routes/candidate.routes";
-import { authRoutes } from "./routes/auth.routes";
+import { jobRoutes } from "./routes/job.routes.js";
+import { candidateRoutes } from "./routes/candidate.routes.js";
+import { authRoutes } from "./routes/auth.routes.js";
 
 app.use("/api/jobs", jobRoutes);
 app.use("/api/candidates", candidateRoutes);

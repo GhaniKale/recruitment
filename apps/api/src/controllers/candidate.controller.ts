@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-import { CandidateService } from "../services/candidate.service";
+import { CandidateService } from "../services/candidate.service.js";
 
 export const CandidateController = {
     async getAllCandidates(req: Request, res: Response) {

@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-import { JobService } from "../services/job.service";
+import { JobService } from "../services/job.service.js";
 
 export const JobController = {
     async getAllJobs(req: Request, res: Response) {

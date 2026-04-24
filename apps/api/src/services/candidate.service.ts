@@ -1,5 +1,5 @@
-import { db } from "../db";
-import { candidates, applications, applicationTimeline, candidateDocuments } from "../db/schema";
+import { db } from "../db/index.js";
+import { candidates, applications, applicationTimeline, candidateDocuments } from "../db/schema.js";
 import { eq, desc, and } from "drizzle-orm";
 
 export const CandidateService = {
