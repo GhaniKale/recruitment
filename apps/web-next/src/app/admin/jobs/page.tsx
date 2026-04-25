@@ -64,7 +64,7 @@ export default async function AdminJobsPage({ searchParams }: { searchParams: Pr
                         <input
                             type="text"
                             name="q"
-                            defaultValue={searchParams.q}
+                            defaultValue={params.q}
                             className="block w-full pl-10 pr-3 py-2.5 border border-slate-300 dark:border-slate-700 rounded-lg leading-5 bg-white dark:bg-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-slate-500 focus:outline-none focus:ring-1 focus:ring-primary focus:border-primary sm:text-sm transition duration-150 ease-in-out"
                             placeholder="Cari judul pekerjaan..."
                         />
@@ -75,7 +75,7 @@ export default async function AdminJobsPage({ searchParams }: { searchParams: Pr
                             <div className="relative">
                                 <select
                                     name="country"
-                                    defaultValue={searchParams.country}
+                                    defaultValue={params.country}
                                     className="appearance-none block w-full pl-3 pr-10 py-2.5 border border-slate-300 dark:border-slate-700 rounded-lg leading-5 bg-white dark:bg-slate-900 text-slate-900 dark:text-white focus:outline-none focus:ring-1 focus:ring-primary focus:border-primary sm:text-sm cursor-pointer"
                                 >
                                     <option value="all">Semua Negara</option>
@@ -95,7 +95,7 @@ export default async function AdminJobsPage({ searchParams }: { searchParams: Pr
                             <div className="relative">
                                 <select
                                     name="status"
-                                    defaultValue={searchParams.status}
+                                    defaultValue={params.status}
                                     className="appearance-none block w-full pl-3 pr-10 py-2.5 border border-slate-300 dark:border-slate-700 rounded-lg leading-5 bg-white dark:bg-slate-900 text-slate-900 dark:text-white focus:outline-none focus:ring-1 focus:ring-primary focus:border-primary sm:text-sm cursor-pointer"
                                 >
                                     <option value="all">Semua Status</option>
