@@ -5,7 +5,8 @@ import JobStatusToggle from '@/components/admin/JobStatusToggle';
 
 export const revalidate = 0;
 
-export default async function AdminJobsPage({ searchParams }: { searchParams: { q?: string; country?: string; status?: string; page?: string } }) {
+export default async function AdminJobsPage({ searchParams }: { searchParams: Promise<{ q?: string; country?: string; status?: string; page?: string }> }) {
+    const params = await searchParams;
     const supabase = await createClient();
 
     let query = supabase
@@ -13,19 +14,19 @@ export default async function AdminJobsPage({ searchParams }: { searchParams: { 
         .select('*', { count: 'exact' })
         .order('created_at', { ascending: false });
 
-    if (searchParams.q) {
-        query = query.ilike('title', `%${searchParams.q}%`);
+    if (params.q) {
+        query = query.ilike('title', `%${params.q}%`);
     }
-    if (searchParams.country && searchParams.country !== 'all') {
-        query = query.eq('country', searchParams.country);
+    if (params.country && params.country !== 'all') {
+        query = query.eq('country', params.country);
     }
-    if (searchParams.status && searchParams.status !== 'all') {
-        if (searchParams.status === 'active') query = query.eq('is_active', true);
-        if (searchParams.status === 'inactive') query = query.eq('is_active', false);
+    if (params.status && params.status !== 'all') {
+        if (params.status === 'active') query = query.eq('is_active', true);
+        if (params.status === 'inactive') query = query.eq('is_active', false);
     }
 
     // Pagination
-    const page = parseInt(searchParams.page || '1');
+    const page = parseInt(params.page || '1');
     const limit = 10;
     const from = (page - 1) * limit;
     const to = from + limit - 1;
@@ -79,8 +80,14 @@ export default async function AdminJobsPage({ searchParams }: { searchParams: { 
                                 >
                                     <option value="all">Semua Negara</option>
                                     <option value="Jepang">Jepang</option>
-                                    <option value="Taiwan">Taiwan</option>
                                     <option value="Korea Selatan">Korea Selatan</option>
+                                    <option value="Taiwan">Taiwan</option>
+                                    <option value="Singapore">Singapore</option>
+                                    <option value="Hongkong">Hongkong</option>
+                                    <option value="Malaysia">Malaysia</option>
+                                    <option value="Arab Saudi">Arab Saudi</option>
+                                    <option value="Polandia">Polandia</option>
+                                    <option value="Turki">Turki</option>
                                 </select>
                             </div>
                         </div>

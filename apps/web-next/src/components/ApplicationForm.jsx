@@ -138,12 +138,11 @@ export default function ApplicationForm({ jobTitle, jobId }) {
                     <div className="space-y-4">
                         <div>
                             <label htmlFor="cv_file" className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1">Upload CV / Resume (PDF/DOC)</label>
-                            <div className={`mt-1 flex justify-center px-6 pt-5 pb-6 border-2 border-dashed rounded-lg transition-colors cursor-pointer group relative ${
-                                uploadStatus === 'success' ? 'border-accent bg-accent/5' :
+                            <div className={`mt-1 flex justify-center px-6 pt-5 pb-6 border-2 border-dashed rounded-lg transition-colors cursor-pointer group relative ${uploadStatus === 'success' ? 'border-accent bg-accent/5' :
                                 uploadStatus === 'error' ? 'border-red-400 bg-red-50 dark:bg-red-950/20' :
-                                uploadStatus === 'uploading' ? 'border-primary bg-primary/5' :
-                                'border-slate-300 dark:border-slate-700 hover:bg-slate-50 dark:hover:bg-slate-800'
-                            }`}>
+                                    uploadStatus === 'uploading' ? 'border-primary bg-primary/5' :
+                                        'border-slate-300 dark:border-slate-700 hover:bg-slate-50 dark:hover:bg-slate-800'
+                                }`}>
                                 <div className="space-y-1 text-center pointer-events-none">
                                     {uploadStatus === 'uploading' ? (
                                         <>
@@ -153,7 +152,7 @@ export default function ApplicationForm({ jobTitle, jobId }) {
                                             <p className="text-sm text-primary font-medium">Mengupload...</p>
                                             {/* Progress bar */}
                                             <div className="w-48 mx-auto bg-slate-200 dark:bg-slate-700 rounded-full h-1.5 overflow-hidden">
-                                                <div className="bg-primary h-full rounded-full animate-pulse" style={{width: '70%'}}></div>
+                                                <div className="bg-primary h-full rounded-full animate-pulse" style={{ width: '70%' }}></div>
                                             </div>
                                         </>
                                     ) : uploadStatus === 'success' ? (
@@ -174,7 +173,7 @@ export default function ApplicationForm({ jobTitle, jobId }) {
                                             <div className="flex text-sm text-slate-600 dark:text-slate-400 justify-center">
                                                 <p className="font-medium text-primary hover:text-blue-500">Upload file</p>
                                             </div>
-                                            <p className="text-xs text-slate-500 dark:text-slate-500">Max 5MB (PDF, DOCX)</p>
+                                            <p className="text-xs text-slate-500 dark:text-slate-500">Max 100KB (PDF, DOCX)</p>
                                         </>
                                     )}
                                 </div>

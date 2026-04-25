@@ -130,6 +130,8 @@ export default function JobForm({ job }: { job?: Job | null }) {
                                         <option value="Jepang">Jepang</option>
                                         <option value="Korea Selatan">Korea Selatan</option>
                                         <option value="Taiwan">Taiwan</option>
+                                        <option value="Singapore">Singapore</option>
+                                        <option value="Hongkong">Hongkong</option>
                                         <option value="Malaysia">Malaysia</option>
                                         <option value="Arab Saudi">Arab Saudi</option>
                                         <option value="Polandia">Polandia</option>

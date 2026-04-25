@@ -4,13 +4,14 @@ import { notFound } from 'next/navigation';
 
 export const revalidate = 0;
 
-export default async function EditJobPage({ params }: { params: { id: string } }) {
+export default async function EditJobPage({ params }: { params: Promise<{ id: string }> }) {
+    const { id } = await params;
     const supabase = await createClient();
 
     const { data: job, error } = await supabase
         .from('jobs')
         .select('*')
-        .eq('id', params.id)
+        .eq('id', id)
         .single();
 
     if (error || !job) {
