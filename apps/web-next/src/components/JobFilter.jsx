@@ -1,6 +1,6 @@
 export default function JobFilter() {
     return (
-        <div className="sticky top-20 z-40 bg-white/80 dark:bg-slate-900/80 backdrop-blur-md border-b border-slate-200 dark:border-slate-800 py-4 shadow-sm">
+        <div className="bg-white dark:bg-slate-900 border-b border-slate-200 dark:border-slate-800 py-4 shadow-sm">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                 <form className="flex flex-col md:flex-row gap-4 items-center justify-center">
                     {/* Search Input */}
