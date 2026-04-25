@@ -6,7 +6,7 @@ export default function HomeCTA() {
             <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
                 <h2 className="text-3xl font-bold text-slate-900 dark:text-white mb-6">Siap Bekerja di Luar Negeri?</h2>
                 <p className="text-slate-600 dark:text-slate-400 mb-8 text-lg">
-                    LPK Akur Sauyunan membuka kesempatan kerja ke luar negeri dengan pendampingan lengkap, legalitas jelas, dan proses terpercaya.
+                    LPK Akuur Sauyunan membuka kesempatan kerja ke luar negeri dengan pendampingan lengkap, legalitas jelas, dan proses terpercaya.
                 </p>
                 <div className="flex flex-col sm:flex-row justify-center gap-4">
                     <Link href="/costs" className="px-8 py-3 rounded-xl bg-primary text-white font-semibold hover:bg-primary-hover transition-colors shadow-lg shadow-primary/30">

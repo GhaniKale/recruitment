@@ -6,8 +6,8 @@ import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 const inter = Inter({ subsets: ["latin"], variable: '--font-inter' });
 
 export const metadata: Metadata = {
-  title: "LPK Akur Sauyunan - Penyalur Tenaga Kerja Luar Negeri Resmi",
-  description: "LPK Akur Sauyunan - Lembaga penyalur tenaga kerja luar negeri terpercaya dengan proses aman dan legal.",
+  title: "LPK Akuur Sauyunan - Pelatihan & Bekerja Sama Dengan Penyalur Tenaga Kerja Luar Negeri Resmi",
+  description: "LPK Akuur Sauyunan - Lembaga pelatihan & kerja sama dengan penyalur tenaga kerja luar negeri terpercaya dengan proses aman dan legal.",
 };
 
 export default function RootLayout({

@@ -6,7 +6,7 @@ export default function JobsHero() {
                     LOWONGAN KERJA
                 </h1>
                 <p className="text-lg text-slate-600 dark:text-slate-400 max-w-2xl mx-auto">
-                    Temukan peluang karir internasional terbaik dan wujudkan impian masa depan Anda bersama LPK Akur Sauyunan.
+                    Temukan peluang karir internasional terbaik dan wujudkan impian masa depan Anda bersama LPK Akuur Sauyunan.
                 </p>
             </div>
         </div>

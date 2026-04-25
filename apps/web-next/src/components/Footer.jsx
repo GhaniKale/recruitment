@@ -10,12 +10,12 @@ export default function Footer() {
                         <div className="flex items-center gap-2">
                             <span className="material-icons text-accent text-3xl">verified_user</span>
                             <div className="flex flex-col leading-tight">
-                                <span className="font-extrabold text-xl tracking-tight">LPK AKUR</span>
+                                <span className="font-extrabold text-xl tracking-tight">LPK Akuur</span>
                                 <span className="text-[10px] font-semibold text-primary tracking-widest uppercase text-slate-400">Sauyunan</span>
                             </div>
                         </div>
                         <p className="text-slate-400 text-sm leading-relaxed">
-                            LPK Akur Sauyunan adalah lembaga penyalur tenaga kerja luar negeri terpercaya yang menghubungkan tenaga kerja profesional Indonesia dengan peluang global secara aman dan legal.
+                            LPK Akuur Sauyunan adalah lembaga pelatihan & penyalur tenaga kerja luar negeri terpercaya yang menghubungkan tenaga kerja profesional Indonesia dengan peluang global secara aman dan legal.
                         </p>
                         <div className="flex space-x-4">
                             {['facebook', 'instagram'].map((social) => (
@@ -48,7 +48,7 @@ export default function Footer() {
                         <ul className="space-y-4 text-slate-400 text-sm">
                             <li className="flex items-start gap-3">
                                 <span className="material-icons text-accent text-sm mt-1">location_on</span>
-                                <span>Jl. Jendral Sudirman Kav. 52-53, Jakarta Selatan, 12190</span>
+                                <span>Desa Cikopo RT010/RW004 Bungursari Purwakarta 41181</span>
                             </li>
                             <li className="flex items-center gap-3">
                                 <span className="material-icons text-accent text-sm">phone</span>
@@ -78,7 +78,7 @@ export default function Footer() {
                 </div>
 
                 <div className="pt-8 border-t border-slate-800 text-center text-slate-500 text-sm">
-                    <p>© {new Date().getFullYear()} LPK Akur Sauyunan. All rights reserved.</p>
+                    <p>© {new Date().getFullYear()} LPK Akuur Sauyunan. All rights reserved.</p>
                 </div>
             </div>
         </footer>

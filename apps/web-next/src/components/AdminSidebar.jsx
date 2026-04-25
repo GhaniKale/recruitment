@@ -48,7 +48,7 @@ export default function AdminSidebar({ sidebarOpen, setSidebarOpen }) {
                 <div className="h-16 flex items-center px-6 border-b border-slate-200 dark:border-slate-800 justify-between shrink-0">
                     <div className="flex items-center gap-3">
                         <div className="w-8 h-8 rounded bg-primary flex items-center justify-center text-white font-bold">M</div>
-                        <span className="font-bold text-lg tracking-tight text-slate-900 dark:text-white">LPK Akur</span>
+                        <span className="font-bold text-lg tracking-tight text-slate-900 dark:text-white">LPK Akuur</span>
                     </div>
                     {/* Close button for mobile */}
                     <button
@@ -97,7 +97,7 @@ export default function AdminSidebar({ sidebarOpen, setSidebarOpen }) {
                         </div>
                         <div className="flex-1 min-w-0">
                             <p className="text-sm font-medium text-slate-900 dark:text-white truncate">Admin HR</p>
-                            <p className="text-xs text-slate-500 truncate">admin@akursauyunan.id</p>
+                            <p className="text-xs text-slate-500 truncate">admin@Akuursauyunan.id</p>
                         </div>
                     </div>
 

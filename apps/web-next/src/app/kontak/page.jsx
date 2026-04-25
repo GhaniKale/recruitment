@@ -42,7 +42,7 @@ export default function KontakPage() {
                         {/* Contact Info */}
                         <div className="space-y-8">
                             <div className="bg-white dark:bg-slate-900 rounded-2xl shadow-lg border border-slate-200 dark:border-slate-800 p-8 space-y-6">
-                                <h2 className="text-2xl font-bold text-slate-900 dark:text-white">LPK Akur Sauyunan</h2>
+                                <h2 className="text-2xl font-bold text-slate-900 dark:text-white">LPK Akuur Sauyunan</h2>
                                 <p className="text-slate-600 dark:text-slate-400 leading-relaxed">
                                     Lembaga penyalur tenaga kerja luar negeri resmi dan terpercaya dengan pendampingan lengkap hingga penempatan.
                                 </p>

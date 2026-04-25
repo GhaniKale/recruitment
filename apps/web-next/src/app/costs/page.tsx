@@ -15,12 +15,12 @@ const countries = [
         color: 'from-red-500 to-red-700',
         borderColor: 'border-red-500',
         bgColor: 'bg-red-50 dark:bg-red-950/20',
-        description: 'Program penempatan tenaga kerja ke Turki di sektor manufaktur, konstruksi, dan pertanian.',
+        description: 'Program penempatan tenaga kerja ke Turki di sektor perhotelan, manufaktur, dan konstruksi',
         requirements: [
-            'Usia 21-45 tahun',
+            'Usia Min 18 tahun',
             'Sehat jasmani & rohani',
             'Tidak buta warna',
-            'Pendidikan min. SMP/sederajat',
+            'Pendidikan min. SMA/sederajat',
             'Memiliki paspor aktif',
             'Bersedia mengikuti pelatihan',
         ],
@@ -40,9 +40,9 @@ const countries = [
         color: 'from-blue-600 to-blue-800',
         borderColor: 'border-blue-600',
         bgColor: 'bg-blue-50 dark:bg-blue-950/20',
-        description: 'Program penempatan tenaga kerja ke Malaysia di sektor perkebunan, manufaktur, dan perhotelan.',
+        description: 'Program penempatan tenaga kerja ke Malaysia di sektor perhotelan, asisten rumah tangga, perkebunan, dan manufaktur.',
         requirements: [
-            'Usia 21-40 tahun',
+            'Usia Min 18 tahun',
             'Sehat jasmani & rohani',
             'Pendidikan min. SMP/sederajat',
             'Memiliki paspor aktif',
@@ -65,7 +65,7 @@ const countries = [
         bgColor: 'bg-green-50 dark:bg-green-950/20',
         description: 'Program penempatan tenaga kerja ke Arab Saudi di sektor hospitality, kesehatan, dan konstruksi.',
         requirements: [
-            'Usia 21-45 tahun',
+            'Usia Min 18 tahun',
             'Sehat jasmani & rohani',
             'Pendidikan min. SMP/sederajat',
             'Memiliki paspor aktif',
@@ -205,7 +205,7 @@ export default function CostPage() {
                                         <span className="material-icons text-amber-400 mt-0.5">warning</span>
                                         <div>
                                             <p className="text-sm font-bold text-white mb-1">Waspada Penipuan</p>
-                                            <p className="text-xs text-slate-400">LPK Akur Sauyunan TIDAK PERNAH meminta transfer ke rekening pribadi. Semua transaksi wajib melalui rekening resmi perusahaan.</p>
+                                            <p className="text-xs text-slate-400">LPK Akuur Sauyunan TIDAK PERNAH meminta transfer ke rekening pribadi. Semua transaksi wajib melalui rekening resmi perusahaan.</p>
                                         </div>
                                     </div>
                                 </div>

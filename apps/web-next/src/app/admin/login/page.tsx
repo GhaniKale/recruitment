@@ -16,7 +16,7 @@ export default function AdminLoginPage() {
                         <div className="w-10 h-10 bg-gradient-to-br from-primary to-blue-600 rounded-lg flex items-center justify-center shadow-lg shadow-primary/30">
                             <span className="text-white font-bold text-xl">M</span>
                         </div>
-                        <h2 className="text-2xl font-bold tracking-tight text-slate-900 dark:text-white">LPK AKUR</h2>
+                        <h2 className="text-2xl font-bold tracking-tight text-slate-900 dark:text-white">LPK Akuur</h2>
                     </div>
                     <p className="text-sm font-medium text-slate-500 dark:text-slate-400 uppercase tracking-widest">Admin Panel</p>
                 </div>
@@ -24,7 +24,7 @@ export default function AdminLoginPage() {
                 <LoginForm />
 
                 <p className="mt-8 text-center text-xs text-slate-400 dark:text-slate-500">
-                    © {new Date().getFullYear()} LPK Akur Sauyunan. All rights reserved.
+                    © {new Date().getFullYear()} LPK Akuur Sauyunan. All rights reserved.
                 </p>
             </div>
         </div>

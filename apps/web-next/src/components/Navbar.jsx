@@ -44,7 +44,7 @@ export default function Navbar() {
                     <Link href="/" className="flex-shrink-0 flex items-center gap-2 cursor-pointer group">
                         <span className="material-icons text-accent text-3xl group-hover:scale-110 transition-transform">verified_user</span>
                         <div className="flex flex-col leading-tight">
-                            <span className="font-extrabold text-lg tracking-tight text-slate-900 dark:text-white">LPK AKUR</span>
+                            <span className="font-extrabold text-lg tracking-tight text-slate-900 dark:text-white">LPK Akuur</span>
                             <span className="text-[10px] font-semibold text-primary tracking-widest uppercase">Sauyunan</span>
                         </div>
                     </Link>

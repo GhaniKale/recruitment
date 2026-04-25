@@ -12,15 +12,15 @@ export default function HomeHero() {
                             Resmi &amp; Terdaftar
                         </div>
                         <h1 className="text-4xl lg:text-6xl font-extrabold text-slate-900 dark:text-white leading-tight mb-6">
-                            Penyalur Tenaga Kerja <span className="text-primary relative inline-block">
+                            Pelatihan & Bekerja Sama Dengan Penyalur Tenaga Kerja <span className="text-primary relative inline-block">
                                 Terpercaya
                                 <svg className="absolute w-full h-3 -bottom-1 left-0 text-primary/20" preserveAspectRatio="none" viewBox="0 0 100 10">
                                     <path d="M0 5 Q 50 10 100 5" fill="none" stroke="currentColor" strokeWidth="8"></path>
                                 </svg>
-                            </span> & Legal
+                            </span> dan Legal
                         </h1>
                         <p className="text-lg text-slate-600 dark:text-slate-400 mb-8 leading-relaxed max-w-lg">
-                            LPK Akur Sauyunan menghubungkan talenta terbaik Indonesia dengan peluang karir internasional. Proses aman, legal, dan pendampingan lengkap hingga penempatan.
+                            LPK Akuur Sauyunan menghubungkan talenta terbaik Indonesia dengan peluang karir internasional. Proses aman, legal, pendampingan lengkap hingga penempatan, dan menyediakan jasa pembuatan passport.
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4">
                             <Link href="/costs" className="inline-flex justify-center items-center px-8 py-4 rounded-xl bg-primary text-white font-semibold text-lg hover:bg-primary-hover transition-all shadow-xl shadow-primary/25 hover:-translate-y-1">

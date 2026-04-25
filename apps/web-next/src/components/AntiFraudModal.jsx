@@ -36,10 +36,10 @@ export default function AntiFraudModal() {
 
                 <div className="p-6 md:p-8">
                     <p className="text-slate-700 dark:text-slate-300 mb-4 leading-relaxed">
-                        LPK Akur Sauyunan <strong>TIDAK PERNAH</strong> memungut biaya apapun dari kandidat selama proses rekrutmen (tiket pesawat, akomodasi, biaya admin, dll).
+                        LPK Akuur Sauyunan <strong>TIDAK PERNAH</strong> memungut biaya apapun dari kandidat selama proses rekrutmen (tiket pesawat, akomodasi, biaya admin, dll).
                     </p>
                     <p className="text-slate-700 dark:text-slate-300 mb-6 leading-relaxed">
-                        Mohon abaikan jika ada pihak yang mengatasnamakan LPK Akur Sauyunan dan meminta sejumlah uang. Segera laporkan ke kontak resmi kami.
+                        Mohon abaikan jika ada pihak yang mengatasnamakan LPK Akuur Sauyunan dan meminta sejumlah uang. Segera laporkan ke kontak resmi kami.
                     </p>
 
                     <div className="bg-slate-50 dark:bg-slate-900 p-4 rounded-xl border border-slate-100 dark:border-slate-700 mb-6">
