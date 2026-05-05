@@ -18,6 +18,7 @@ import AntiFraudModal from '@/components/AntiFraudModal';
 // import AntiFraudModal from '../components/AntiFraudModal';
 import About from '@/components/About'; /* verify these exist */
 import Industries from '@/components/Industries';
+import GallerySlider from '@/components/GallerySlider';
 
 export default function Home() {
   return (
@@ -29,6 +30,7 @@ export default function Home() {
         <About />
         <HowToApply />
         <Industries />
+        <GallerySlider />
         <HomeCTA />
       </main>
       <Footer />

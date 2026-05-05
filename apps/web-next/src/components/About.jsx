@@ -68,13 +68,13 @@ export default function About() {
                     <div className="relative">
                         <div className="grid grid-cols-2 gap-4">
                             <img
-                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBdWOsaD_fOI9pNYDh9nrN68kJ9AM5jz9SNxMiNHiWxOSQdBxUIetpbz1MPDymZTz-YJFXRvcUNs0g6HqYxYnen3HI5V08GCDZa0g7_q6K2UBR_2hhj2ZSP4nGzMVaNv8oXxj-JStK3LzX2mbo488kKJeD-v2kTZwL120QXI2VFViyI0T10XO0VjUs3V_p2NCE0xPfbY-lKIApW4o35bW2FEkC3t_YDSYESfH-41Lsgt2vGM0ZE3Kcz3hD35VpLkLHX24_6W1aJbA"
-                                alt="Modern corporate office meeting room"
+                                src="/image/img2.jpg"
+                                alt="Tim HR melakukan proses seleksi kandidat"
                                 className="rounded-2xl shadow-lg w-full h-64 object-cover"
                             />
                             <img
-                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBOA1GVwDxhOna3HiahUGQhrl7fqs8ziu-vB-xAR2WsH_EmpGSnzmkFTK2PldCY89So2gccWIT74ALzt5HMnALcSXGgTEkDXiBw4KilB2TrFhJTZgjTP26Mj53-cCj5IYyWO3DMvw-6Aj4usn_C0uFT8KCMz8-tmbTQ6CahCtCouF2sOjfpWogTdU71QtndikMYp2j9Iv8tHSrrRQtltIPIvn1PZCcXgUql4vA4jKiKX9Kh6ZTrlQx_JtJ3m8beCJoJapneSYGzzA"
-                                alt="Two professionals shaking hands in agreement"
+                                src="/image/img3.jpg"
+                                alt="Kandidat profesional siap untuk bekerja"
                                 className="rounded-2xl shadow-lg w-full h-64 object-cover mt-12"
                             />
                         </div>

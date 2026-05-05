@@ -45,8 +45,8 @@ export default function HomeHero() {
 
                         <div className="relative rounded-2xl overflow-hidden shadow-2xl shadow-slate-200 dark:shadow-slate-900/50 border border-slate-100 dark:border-slate-800">
                             <img
-                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDX211xTE5miaDIDICk_a0dn72UtHeegMLoZKZ5pCBDDU-5b_mAPl-CsLb0a5xgxfv7mlAWcIsIZybi_8uOwrPoz7FhaZ4g6cqv6CRtEZz5GFwBrkQ8KhNfprXpEwVNtTEbwqWbabvbMMwdPiKj0l0U-VST_ZWBsoaze1NgKVL6m8ui3r1qKnyLhc4WdQqrJCz75_GEzGrck7_E2nlMTRdHdLTxd366_k9HMy4w0SFJ3OA_opCOpCcS___re_p4Yfd2kFFvDCIIzQ"
-                                alt="Professional diverse team in a corporate office setting"
+                                src="/image/img1.jpg"
+                                alt="Proses interview kerja profesional di kantor"
                                 className="w-full h-auto object-cover transform hover:scale-105 transition-transform duration-700"
                             />
 
