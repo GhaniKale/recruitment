@@ -4,6 +4,7 @@ import Stats from '@/components/Stats';
 // import About from '@/components/About'; // Was in original but I should check if it exists or if I need to migrate it
 // import Industries from '@/components/Industries';
 import HomeCTA from '@/components/HomeCTA';
+import HowToApply from '@/components/HowToApply';
 import Footer from '@/components/Footer';
 import AntiFraudModal from '@/components/AntiFraudModal';
 // Checking original imports:
@@ -26,6 +27,7 @@ export default function Home() {
         <HomeHero />
         <Stats />
         <About />
+        <HowToApply />
         <Industries />
         <HomeCTA />
       </main>

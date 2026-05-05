@@ -9,7 +9,7 @@ export default function HomeCTA() {
                     LPK Akuur Sauyunan membuka kesempatan kerja ke luar negeri dengan pendampingan lengkap, legalitas jelas, dan proses terpercaya.
                 </p>
                 <div className="flex flex-col sm:flex-row justify-center gap-4">
-                    <Link href="/costs" className="px-8 py-3 rounded-xl bg-primary text-white font-semibold hover:bg-primary-hover transition-colors shadow-lg shadow-primary/30">
+                    <Link href="/biaya" className="px-8 py-3 rounded-xl bg-primary text-white font-semibold hover:bg-primary-hover transition-colors shadow-lg shadow-primary/30">
                         Lihat Program Recruitment
                     </Link>
                     <a href="https://wa.me/6285972842784" target="_blank" rel="noopener noreferrer" className="px-8 py-3 rounded-xl bg-accent text-white font-semibold hover:bg-accent-hover transition-colors shadow-lg shadow-accent/30 flex items-center justify-center gap-2">

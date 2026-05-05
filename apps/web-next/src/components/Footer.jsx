@@ -35,9 +35,9 @@ export default function Footer() {
                         <h4 className="text-lg font-bold mb-6">Navigasi</h4>
                         <ul className="space-y-4 text-slate-400 text-sm">
                             <li><a href="/" className="hover:text-accent transition-colors">Beranda</a></li>
-                            <li><a href="/#about" className="hover:text-accent transition-colors">Tentang Kami</a></li>
-                            <li><Link href="/costs" className="hover:text-accent transition-colors">Recruitment</Link></li>
                             <li><Link href="/jobs" className="hover:text-accent transition-colors">Lowongan</Link></li>
+                            <li><Link href="/cara-melamar" className="hover:text-accent transition-colors">Cara Melamar</Link></li>
+                            <li><Link href="/biaya" className="hover:text-accent transition-colors">Biaya</Link></li>
                             <li><Link href="/kontak" className="hover:text-accent transition-colors">Kontak</Link></li>
                         </ul>
                     </div>

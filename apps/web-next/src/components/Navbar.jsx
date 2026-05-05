@@ -20,9 +20,9 @@ export default function Navbar() {
 
     const navLinks = [
         { name: 'Beranda', href: '/' },
-        { name: 'Tentang Kami', href: '/#about' },
-        { name: 'Recruitment', href: '/costs' },
         { name: 'Lowongan', href: '/jobs' },
+        { name: 'Cara Melamar', href: '/cara-melamar' },
+        { name: 'Biaya', href: '/biaya' },
     ];
 
     const isActive = (path) => {

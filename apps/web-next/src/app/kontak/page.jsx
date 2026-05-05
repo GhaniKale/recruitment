@@ -54,7 +54,7 @@ export default function KontakPage() {
                                         </div>
                                         <div>
                                             <p className="font-semibold text-slate-900 dark:text-white text-sm">Alamat</p>
-                                            <p className="text-sm text-slate-500 dark:text-slate-400">Jl. Jendral Sudirman Kav. 52-53, Jakarta Selatan, 12190</p>
+                                            <p className="text-sm text-slate-500 dark:text-slate-400">Desa Cikopo RT010/RW004 Bungursari Purwakarta 41181</p>
                                         </div>
                                     </div>
 
