@@ -7,9 +7,6 @@ import AdminLayout from '@/components/AdminLayout'; // Check if layout is used i
 // I created app/admin/layout.tsx in Step 215. So page.tsx should just be the content.
 
 import StatsGrid from '@/components/StatsGrid';
-import AnalyticsChart from '@/components/AnalyticsChart';
-import AnalyticsMap from '@/components/AnalyticsMap';
-import AnalyticsConversion from '@/components/AnalyticsConversion';
 import ApplicantsTable from '@/components/ApplicantsTable';
 
 export const revalidate = 0;
@@ -61,14 +58,6 @@ export default async function AdminDashboard() {
             <h1 className="text-2xl font-bold text-slate-900 dark:text-white mb-6">Dashboard Pelamar</h1>
 
             <StatsGrid stats={stats} />
-
-            <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-8">
-                <AnalyticsChart />
-                <aside className="lg:col-span-1 space-y-6">
-                    <AnalyticsMap />
-                    <AnalyticsConversion />
-                </aside>
-            </div>
 
             <ApplicantsTable applicants={recentApplicants} />
         </div>

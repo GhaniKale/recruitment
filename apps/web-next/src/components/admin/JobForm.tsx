@@ -118,25 +118,28 @@ export default function JobForm({ job }: { job?: Job | null }) {
                             <div>
                                 <label className="block text-sm font-medium leading-6 text-slate-900 dark:text-slate-200" htmlFor="negara">Negara Tujuan <span className="text-red-500">*</span></label>
                                 <div className="mt-2 relative">
-                                    <select
+                                    <input
+                                        list="negara-options"
                                         id="negara"
                                         name="negara"
                                         value={formData.negara}
                                         onChange={handleChange}
-                                        className="block w-full rounded-lg border-0 py-2.5 pl-3 pr-10 text-slate-900 dark:text-white shadow-sm ring-1 ring-inset ring-slate-300 dark:ring-slate-700 focus:ring-2 focus:ring-inset focus:ring-primary sm:text-sm sm:leading-6 dark:bg-slate-800"
+                                        className="block w-full rounded-lg border-0 py-2.5 text-slate-900 dark:text-white shadow-sm ring-1 ring-inset ring-slate-300 dark:ring-slate-700 placeholder:text-slate-400 focus:ring-2 focus:ring-inset focus:ring-primary sm:text-sm sm:leading-6 dark:bg-slate-800"
+                                        placeholder="Ketik atau pilih negara..."
                                         required
-                                    >
-                                        <option value="" disabled>Pilih Negara</option>
-                                        <option value="Jepang">Jepang</option>
-                                        <option value="Korea Selatan">Korea Selatan</option>
-                                        <option value="Taiwan">Taiwan</option>
-                                        <option value="Singapore">Singapore</option>
-                                        <option value="Hongkong">Hongkong</option>
-                                        <option value="Malaysia">Malaysia</option>
-                                        <option value="Arab Saudi">Arab Saudi</option>
-                                        <option value="Polandia">Polandia</option>
-                                        <option value="Turki">Turki</option>
-                                    </select>
+                                    />
+                                    <datalist id="negara-options">
+                                        <option value="Jepang" />
+                                        <option value="Korea Selatan" />
+                                        <option value="Taiwan" />
+                                        <option value="Singapore" />
+                                        <option value="Hongkong" />
+                                        <option value="Malaysia" />
+                                        <option value="Arab Saudi" />
+                                        <option value="Polandia" />
+                                        <option value="Turki" />
+                                        <option value="Inggris" />
+                                    </datalist>
                                     {state.error?.country && <p className="mt-1 text-sm text-red-600">{state.error.country}</p>}
                                 </div>
                             </div>
@@ -158,20 +161,23 @@ export default function JobForm({ job }: { job?: Job | null }) {
                             <div>
                                 <label className="block text-sm font-medium leading-6 text-slate-900 dark:text-slate-200" htmlFor="sektor">Sektor Pekerjaan</label>
                                 <div className="mt-2">
-                                    <select
+                                    <input
+                                        list="sektor-options"
                                         id="sektor"
                                         name="sektor"
                                         value={formData.sektor}
                                         onChange={handleChange}
-                                        className="block w-full rounded-lg border-0 py-2.5 pl-3 pr-10 text-slate-900 dark:text-white shadow-sm ring-1 ring-inset ring-slate-300 dark:ring-slate-700 focus:ring-2 focus:ring-inset focus:ring-primary sm:text-sm sm:leading-6 dark:bg-slate-800"
-                                    >
-                                        <option value="Manufaktur">Manufaktur</option>
-                                        <option value="Konstruksi">Konstruksi</option>
-                                        <option value="Kesehatan (Caregiver)">Kesehatan (Caregiver)</option>
-                                        <option value="Pertanian">Pertanian</option>
-                                        <option value="Hospitality">Hospitality</option>
-                                        <option value="Lainnya">Lainnya</option>
-                                    </select>
+                                        className="block w-full rounded-lg border-0 py-2.5 text-slate-900 dark:text-white shadow-sm ring-1 ring-inset ring-slate-300 dark:ring-slate-700 placeholder:text-slate-400 focus:ring-2 focus:ring-inset focus:ring-primary sm:text-sm sm:leading-6 dark:bg-slate-800"
+                                        placeholder="Ketik atau pilih sektor..."
+                                    />
+                                    <datalist id="sektor-options">
+                                        <option value="Manufaktur" />
+                                        <option value="Konstruksi" />
+                                        <option value="Kesehatan (Caregiver)" />
+                                        <option value="Pertanian" />
+                                        <option value="Hospitality" />
+                                        <option value="Lainnya" />
+                                    </datalist>
                                     {state.error?.category && <p className="mt-1 text-sm text-red-600">{state.error.category}</p>}
                                 </div>
                             </div>
@@ -231,19 +237,23 @@ export default function JobForm({ job }: { job?: Job | null }) {
                         <div className="p-6 space-y-4">
                             <div>
                                 <label className="block text-sm font-medium leading-6 text-slate-900 dark:text-slate-200" htmlFor="tipe_kontrak">Tipe Kontrak</label>
-                                <select
+                                <input
+                                    list="tipe-kontrak-options"
                                     id="tipe_kontrak"
                                     name="tipe_kontrak"
                                     value={formData.tipe_kontrak}
                                     onChange={handleChange}
-                                    className="mt-2 block w-full rounded-lg border-0 py-2.5 text-slate-900 dark:text-white shadow-sm ring-1 ring-inset ring-slate-300 dark:ring-slate-700 focus:ring-2 focus:ring-inset focus:ring-primary sm:text-sm sm:leading-6 dark:bg-slate-800"
-                                >
-                                    <option>Kontrak 1 Tahun</option>
-                                    <option>Kontrak 2 Tahun</option>
-                                    <option>Kontrak 3 Tahun</option>
-                                    <option>Magang (Internship)</option>
-                                    <option>Permanen</option>
-                                </select>
+                                    className="mt-2 block w-full rounded-lg border-0 py-2.5 text-slate-900 dark:text-white shadow-sm ring-1 ring-inset ring-slate-300 dark:ring-slate-700 placeholder:text-slate-400 focus:ring-2 focus:ring-inset focus:ring-primary sm:text-sm sm:leading-6 dark:bg-slate-800"
+                                    placeholder="Contoh: Kontrak 6 Bulan, Musiman..."
+                                />
+                                <datalist id="tipe-kontrak-options">
+                                    <option value="Kontrak 1 Tahun" />
+                                    <option value="Kontrak 2 Tahun" />
+                                    <option value="Kontrak 3 Tahun" />
+                                    <option value="Musiman (Seasonal)" />
+                                    <option value="Magang (Internship)" />
+                                    <option value="Permanen" />
+                                </datalist>
                             </div>
                             <div>
                                 <label className="block text-sm font-medium leading-6 text-slate-900 dark:text-slate-200" htmlFor="kuota">Kuota Penerimaan</label>

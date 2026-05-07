@@ -88,6 +88,7 @@ export default async function AdminJobsPage({ searchParams }: { searchParams: Pr
                                     <option value="Arab Saudi">Arab Saudi</option>
                                     <option value="Polandia">Polandia</option>
                                     <option value="Turki">Turki</option>
+                                    <option value="Inggris">Inggris</option>
                                 </select>
                             </div>
                         </div>
