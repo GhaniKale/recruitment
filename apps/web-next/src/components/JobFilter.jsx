@@ -4,6 +4,9 @@ import { useState, useMemo, useEffect, useRef } from 'react';
 import JobCard from './JobCard';
 import Pagination from './Pagination';
 
+/**
+ * @param {{ jobs?: any[] }} props
+ */
 export default function JobFilter({ jobs = [] }) {
     const [searchTerm, setSearchTerm] = useState('');
     const [debouncedSearchTerm, setDebouncedSearchTerm] = useState('');
