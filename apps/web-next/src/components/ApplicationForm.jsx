@@ -57,7 +57,12 @@ export default function ApplicationForm({ jobTitle, jobId }) {
                 router.push(`/jobs/${jobId}/apply/success`);
             } else if (result?.error) {
                 setFieldErrors(result.error);
-                setGlobalError('Mohon periksa input Anda.');
+                // Create a summary of which fields are wrong
+                const errorFields = Object.keys(result.error).map(field => {
+                    const labels = { full_name: 'Nama Lengkap', nik: 'NIK', email: 'Email', phone: 'Nomor WhatsApp', address: 'Alamat Domisili', cv_file: 'File CV' };
+                    return labels[field] || field;
+                });
+                setGlobalError(`Mohon perbaiki isian pada kolom berikut: ${errorFields.join(', ')}`);
             } else if (result?.message) {
                 setGlobalError(result.message);
             }
@@ -173,7 +178,7 @@ export default function ApplicationForm({ jobTitle, jobId }) {
                                             <div className="flex text-sm text-slate-600 dark:text-slate-400 justify-center">
                                                 <p className="font-medium text-primary hover:text-blue-500">Upload file</p>
                                             </div>
-                                            <p className="text-xs text-slate-500 dark:text-slate-500">Max 100KB (PDF, DOCX)</p>
+                                            <p className="text-xs text-slate-500 dark:text-slate-500">Maks 5MB (PDF, DOC, DOCX)</p>
                                         </>
                                     )}
                                 </div>

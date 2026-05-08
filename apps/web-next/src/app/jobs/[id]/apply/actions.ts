@@ -87,7 +87,15 @@ export async function submitApplication(prevState: unknown, formData: FormData) 
 
         if (candidateError) {
             console.error('Insert Candidate error:', candidateError);
-            return { message: `Gagal menyimpan data kandidat: ${candidateError.message}` };
+            if (candidateError.message.includes('unique constraint') || candidateError.code === '23505') {
+                if (candidateError.message.includes('nik')) {
+                    return { message: 'Pendaftaran gagal: NIK ini sudah terdaftar di sistem kami.' };
+                }
+                if (candidateError.message.includes('email')) {
+                    return { message: 'Pendaftaran gagal: Email ini sudah terdaftar di sistem kami.' };
+                }
+            }
+            return { message: `Gagal menyimpan data kandidat. Silakan coba lagi.` };
         }
         console.log('New candidate created:', newCandidate.id);
         candidateId = newCandidate.id;
@@ -111,7 +119,10 @@ export async function submitApplication(prevState: unknown, formData: FormData) 
 
     if (insertError) {
         console.error('Insert Application error:', insertError);
-        return { message: `Gagal menyimpan lamaran: ${insertError.message}` };
+        if (insertError.message.includes('unique constraint') || insertError.code === '23505') {
+            return { message: 'Anda sudah melamar untuk posisi ini sebelumnya.' };
+        }
+        return { message: `Gagal mengirim lamaran. Silakan coba lagi.` };
     }
     console.log('Application inserted successfully:', appData);
 
