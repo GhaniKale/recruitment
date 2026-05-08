@@ -170,7 +170,7 @@ export default function ApplicationForm({ jobTitle, jobId }) {
                                         <>
                                             <span className="material-icons text-red-500 text-3xl">error</span>
                                             <p className="text-sm text-red-600 font-semibold">Upload gagal, silakan coba lagi.</p>
-                                            <p className="text-xs text-slate-500">File terlalu besar (maks 5MB)</p>
+                                            <p className="text-xs text-slate-500">File terlalu besar (maks 100KB)</p>
                                         </>
                                     ) : (
                                         <>
@@ -178,7 +178,7 @@ export default function ApplicationForm({ jobTitle, jobId }) {
                                             <div className="flex text-sm text-slate-600 dark:text-slate-400 justify-center">
                                                 <p className="font-medium text-primary hover:text-blue-500">Upload file</p>
                                             </div>
-                                            <p className="text-xs text-slate-500 dark:text-slate-500">Maks 5MB (PDF, DOC, DOCX)</p>
+                                            <p className="text-xs text-slate-500 dark:text-slate-500">Maks 100KB (PDF, DOC, DOCX)</p>
                                         </>
                                     )}
                                 </div>
