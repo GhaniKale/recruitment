@@ -1,24 +1,14 @@
-import { createClient } from '@/lib/supabase/server';
+import { requireAdmin } from '@/utils/supabase/admin';
 import { NextResponse } from 'next/server';
 
 export async function POST(request: Request) {
-    const supabase = await createClient(true); // Admin client
-
-    // 1. Check Auth & Role
-    const { data: { user }, error: authError } = await supabase.auth.getUser();
-    if (authError || !user) {
-        return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
+    const adminCheck = await requireAdmin();
+    
+    if (adminCheck.error) {
+        return adminCheck.error;
     }
 
-    const { data: profile } = await supabase
-        .from('profiles')
-        .select('role')
-        .eq('id', user.id)
-        .single();
-
-    if (profile?.role !== 'admin') {
-        return NextResponse.json({ error: 'Forbidden' }, { status: 403 });
-    }
+    const { supabase } = adminCheck;
 
     // 2. Parse Body
     const body = await request.json();
@@ -31,13 +21,13 @@ export async function POST(request: Request) {
     // 3. Generate Signed URL
     // Ensure path is clean (remove bucket name if included?)
     // Assuming 'cvs' bucket
-    const { data, error } = await supabase
+    const { data, error: storageError } = await supabase
         .storage
         .from('cvs')
         .createSignedUrl(path, 60); // 60 seconds
 
-    if (error) {
-        return NextResponse.json({ error: error.message }, { status: 500 });
+    if (storageError) {
+        return NextResponse.json({ error: storageError.message }, { status: 500 });
     }
 
     return NextResponse.json({ url: data.signedUrl });
