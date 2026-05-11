@@ -5,7 +5,8 @@ import DeleteCandidateButton from '@/components/admin/DeleteCandidateButton';
 
 export const revalidate = 0;
 
-export default async function AdminCandidatesPage({ searchParams }: { searchParams: { q?: string; status?: string; job_id?: string; page?: string } }) {
+export default async function AdminCandidatesPage(props: { searchParams: Promise<{ q?: string; status?: string; job_id?: string; page?: string }> }) {
+    const searchParams = await props.searchParams;
     const supabase = await createClient(true);
 
     // SANITY CHECK START
@@ -56,6 +57,8 @@ export default async function AdminCandidatesPage({ searchParams }: { searchPara
     console.log('PAGE: Fetching range:', from, to);
     const { data: candidates, count, error } = await query.range(from, to);
 
+    const totalPages = count ? Math.ceil(count / limit) : 1;
+
     if (error) {
         console.error('PAGE: Error fetching applicants:', error);
     } else {
@@ -67,6 +70,15 @@ export default async function AdminCandidatesPage({ searchParams }: { searchPara
             console.log('PAGE: First row sample:', JSON.stringify(candidates[0], null, 2));
         }
     }
+
+    const buildPaginationUrl = (newPage: number) => {
+        const query = new URLSearchParams();
+        if (searchParams.q) query.set('q', searchParams.q);
+        if (searchParams.status) query.set('status', searchParams.status);
+        if (searchParams.job_id) query.set('job_id', searchParams.job_id);
+        query.set('page', newPage.toString());
+        return `/admin/candidates?${query.toString()}`;
+    };
 
     // Fetch active jobs for filter
     const { data: jobs } = await supabase.from('jobs').select('id, title').eq('is_active', true);
@@ -201,17 +213,37 @@ export default async function AdminCandidatesPage({ searchParams }: { searchPara
                         </tbody>
                     </table>
                 </div>
-                {/* Pagination (Simplified) */}
+                {/* Pagination */}
                 <div className="px-6 py-4 border-t border-slate-200 dark:border-slate-800 flex items-center justify-between">
                     <span className="text-sm text-slate-500">
-                        Halaman {page}
+                        Menampilkan {count === 0 ? 0 : from + 1} - {Math.min(to + 1, count || 0)} dari {count || 0} kandidat
                     </span>
-                    <div className="flex gap-2">
+                    <div className="flex gap-1">
                         {page > 1 && (
-                            <Link href={`/admin/candidates?page=${page - 1}`} className="px-3 py-1 border rounded text-sm hover:bg-slate-50">Prev</Link>
+                            <Link href={buildPaginationUrl(page - 1)} className="px-3 py-1 border border-slate-300 dark:border-slate-700 rounded text-sm hover:bg-slate-50 dark:hover:bg-slate-800 dark:text-slate-300">Prev</Link>
                         )}
-                        {candidates && candidates.length === limit && (
-                            <Link href={`/admin/candidates?page=${page + 1}`} className="px-3 py-1 border rounded text-sm hover:bg-slate-50">Next</Link>
+                        
+                        {Array.from({ length: totalPages }, (_, i) => i + 1).map((p) => {
+                            // Show first page, last page, current page, and pages around current page
+                            if (p === 1 || p === totalPages || (p >= page - 1 && p <= page + 1)) {
+                                return (
+                                    <Link 
+                                        key={p} 
+                                        href={buildPaginationUrl(p)} 
+                                        className={`px-3 py-1 border rounded text-sm ${page === p ? 'bg-primary text-white border-primary' : 'border-slate-300 dark:border-slate-700 hover:bg-slate-50 dark:hover:bg-slate-800 dark:text-slate-300'}`}
+                                    >
+                                        {p}
+                                    </Link>
+                                );
+                            }
+                            if (p === page - 2 || p === page + 2) {
+                                return <span key={p} className="px-2 py-1 text-slate-500">...</span>;
+                            }
+                            return null;
+                        })}
+
+                        {page < totalPages && (
+                            <Link href={buildPaginationUrl(page + 1)} className="px-3 py-1 border border-slate-300 dark:border-slate-700 rounded text-sm hover:bg-slate-50 dark:hover:bg-slate-800 dark:text-slate-300">Next</Link>
                         )}
                     </div>
                 </div>

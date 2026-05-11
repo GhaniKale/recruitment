@@ -33,6 +33,17 @@ export default async function AdminJobsPage({ searchParams }: { searchParams: Pr
 
     const { data: jobs, count, error } = await query.range(from, to);
 
+    const totalPages = count ? Math.ceil(count / limit) : 1;
+
+    const buildPaginationUrl = (newPage: number) => {
+        const query = new URLSearchParams();
+        if (params.q) query.set('q', params.q);
+        if (params.status) query.set('status', params.status);
+        if (params.country) query.set('country', params.country);
+        query.set('page', newPage.toString());
+        return `/admin/jobs?${query.toString()}`;
+    };
+
     // Country flag mapping helper (simplified)
     const getFlagElement = (country: string) => {
         // ... (implementation or just distinct styling)
@@ -183,17 +194,36 @@ export default async function AdminJobsPage({ searchParams }: { searchParams: Pr
                         </tbody>
                     </table>
                 </div>
-                {/* Pagination (Simplified) */}
+                {/* Pagination */}
                 <div className="px-6 py-4 border-t border-slate-200 dark:border-slate-800 flex items-center justify-between">
                     <span className="text-sm text-slate-500">
-                        Halaman {page}
+                        Menampilkan {count === 0 ? 0 : from + 1} - {Math.min(to + 1, count || 0)} dari {count || 0} lowongan
                     </span>
-                    <div className="flex gap-2">
+                    <div className="flex gap-1">
                         {page > 1 && (
-                            <Link href={`/admin/jobs?page=${page - 1}`} className="px-3 py-1 border rounded text-sm hover:bg-slate-50">Prev</Link>
+                            <Link href={buildPaginationUrl(page - 1)} className="px-3 py-1 border border-slate-300 dark:border-slate-700 rounded text-sm hover:bg-slate-50 dark:hover:bg-slate-800 dark:text-slate-300">Prev</Link>
                         )}
-                        {jobs && jobs.length === limit && (
-                            <Link href={`/admin/jobs?page=${page + 1}`} className="px-3 py-1 border rounded text-sm hover:bg-slate-50">Next</Link>
+                        
+                        {Array.from({ length: totalPages }, (_, i) => i + 1).map((p) => {
+                            if (p === 1 || p === totalPages || (p >= page - 1 && p <= page + 1)) {
+                                return (
+                                    <Link 
+                                        key={p} 
+                                        href={buildPaginationUrl(p)} 
+                                        className={`px-3 py-1 border rounded text-sm ${page === p ? 'bg-primary text-white border-primary' : 'border-slate-300 dark:border-slate-700 hover:bg-slate-50 dark:hover:bg-slate-800 dark:text-slate-300'}`}
+                                    >
+                                        {p}
+                                    </Link>
+                                );
+                            }
+                            if (p === page - 2 || p === page + 2) {
+                                return <span key={p} className="px-2 py-1 text-slate-500">...</span>;
+                            }
+                            return null;
+                        })}
+
+                        {page < totalPages && (
+                            <Link href={buildPaginationUrl(page + 1)} className="px-3 py-1 border border-slate-300 dark:border-slate-700 rounded text-sm hover:bg-slate-50 dark:hover:bg-slate-800 dark:text-slate-300">Next</Link>
                         )}
                     </div>
                 </div>
