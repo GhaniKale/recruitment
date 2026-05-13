@@ -139,6 +139,7 @@ export default function JobForm({ job }: { job?: Job | null }) {
                                         <option value="Polandia" />
                                         <option value="Turki" />
                                         <option value="Inggris" />
+                                        <option value="Brunei" />
                                     </datalist>
                                     {state.error?.country && <p className="mt-1 text-sm text-red-600">{state.error.country}</p>}
                                 </div>

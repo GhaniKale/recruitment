@@ -170,7 +170,29 @@ const countries = [
             { title: 'Pembayaran Ketiga', amount: 'Rp 20.000.000', desc: 'Tiket pesawat, asuransi perjalanan, dan pembekalan keberangkatan.' },
         ],
     },
-
+    {
+        id: 'brunei',
+        name: 'Brunei',
+        flag: '🇧🇳',
+        cost: 'Rp 7.000.000',
+        costNum: 7000000,
+        color: 'from-amber-600 to-amber-800',
+        borderColor: 'border-amber-600',
+        bgColor: 'bg-amber-50 dark:bg-amber-950/20',
+        description: 'Program penempatan tenaga kerja ke Brunei Darussalam di sektor hospitality dan umum.',
+        requirements: [
+            'Usia Min 18 tahun',
+            'Sehat jasmani & rohani',
+            'Pendidikan min. SMA/sederajat',
+            'Memiliki paspor aktif',
+            'Bersedia mengikuti pelatihan',
+        ],
+        stages: [
+            { title: 'Pembayaran Pertama', amount: 'Rp 2.000.000', desc: 'Pendaftaran awal, verifikasi dokumen, dan seleksi berkas.' },
+            { title: 'Pembayaran Kedua', amount: 'Rp 3.000.000', desc: 'Pengurusan kontrak kerja, medical check-up, dan legalitas dokumen.' },
+            { title: 'Pembayaran Ketiga', amount: 'Rp 2.000.000', desc: 'Visa kerja, tiket pesawat, asuransi, dan pembekalan akhir.' },
+        ],
+    },
 ];
 
 export default function BiayaPage() {
