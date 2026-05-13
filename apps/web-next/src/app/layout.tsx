@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import FloatingWhatsApp from "@/components/FloatingWhatsApp";
 
 const inter = Inter({ subsets: ["latin"], variable: '--font-inter' });
 
@@ -14,6 +15,8 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const isAdminPage = typeof window !== "undefined" && window.location.pathname.startsWith("/admin");
+
   return (
     <html lang="id">
       <head>
@@ -22,6 +25,7 @@ export default function RootLayout({
       </head>
       <body className={`${inter.variable} antialiased font-sans`}>
         {children}
+        {!isAdminPage && <FloatingWhatsApp />}
       </body>
     </html>
   );
