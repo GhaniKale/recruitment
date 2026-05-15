@@ -19,6 +19,15 @@ import AntiFraudModal from '@/components/AntiFraudModal';
 import About from '@/components/About'; /* verify these exist */
 import Industries from '@/components/Industries';
 import GallerySlider from '@/components/GallerySlider';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Beranda | LPK Akuur Sauyunan',
+  description: 'Temukan peluang kerja terbaik di luar negeri bersama LPK Akuur Sauyunan. Proses aman, legal, dan transparan.',
+  alternates: {
+    canonical: '/',
+  },
+};
 
 export default function Home() {
   return (

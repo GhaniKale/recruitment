@@ -1,6 +1,15 @@
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import Link from 'next/link';
+import type { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: 'Cara Melamar | LPK Akuur Sauyunan',
+  description: 'Panduan lengkap cara melamar pekerjaan ke luar negeri melalui LPK Akuur Sauyunan. Ikuti langkah-langkah mudahnya di sini.',
+  alternates: {
+    canonical: '/cara-melamar',
+  },
+};
 
 export default function CaraMelamarPage() {
     const steps = [

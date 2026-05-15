@@ -3,7 +3,15 @@ import Navbar from '@/components/Navbar';
 import JobsHero from '@/components/JobsHero';
 import JobFilter from '@/components/JobFilter';
 import Footer from '@/components/Footer';
+import type { Metadata } from 'next';
 
+export const metadata: Metadata = {
+  title: 'Lowongan Kerja | LPK Akuur Sauyunan',
+  description: 'Daftar lowongan kerja luar negeri terbaru. Tersedia berbagai posisi di Jepang, Korea, Taiwan, dll.',
+  alternates: {
+    canonical: '/jobs',
+  },
+};
 export const revalidate = 0; // Disable static optimization for real-time data
 
 export default async function JobsPage() {
