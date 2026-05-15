@@ -25,7 +25,7 @@ export default function ApplicationForm({ jobTitle, jobId }) {
             setUploadStatus('uploading');
             // Simulate a brief validation delay
             setTimeout(() => {
-                if (file.size > 5 * 1024 * 1024) {
+                if (file.size > 100 * 1024) {
                     setUploadStatus('error');
                 } else {
                     setUploadStatus('success');
@@ -142,7 +142,7 @@ export default function ApplicationForm({ jobTitle, jobId }) {
                     </h4>
                     <div className="space-y-4">
                         <div>
-                            <label htmlFor="cv_file" className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1">Upload CV / Resume (PDF/DOC)</label>
+                            <label htmlFor="cv_file" className="block text-sm font-medium text-slate-700 dark:text-slate-300 mb-1">Upload CV / Resume (PDF/DOC) — Max 100KB</label>
                             <div className={`mt-1 flex justify-center px-6 pt-5 pb-6 border-2 border-dashed rounded-lg transition-colors cursor-pointer group relative ${uploadStatus === 'success' ? 'border-accent bg-accent/5' :
                                 uploadStatus === 'error' ? 'border-red-400 bg-red-50 dark:bg-red-950/20' :
                                     uploadStatus === 'uploading' ? 'border-primary bg-primary/5' :
@@ -192,6 +192,10 @@ export default function ApplicationForm({ jobTitle, jobId }) {
                                     onChange={handleFileChange}
                                 />
                             </div>
+                            <p className="mt-2 text-sm text-amber-600 dark:text-amber-400 font-medium flex items-center gap-1.5">
+                                <span className="material-icons text-base">info</span>
+                                Please compress your CV file before uploading. Maximum allowed file size is 100KB.
+                            </p>
                             {fieldErrors.cv_file && <p className="text-red-500 text-xs mt-1">{fieldErrors.cv_file[0]}</p>}
                         </div>
                     </div>
